@@ -1,20 +1,27 @@
 "use client";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
+import { useContext } from "react";
+import { StringContext } from "@/Components/provider/SessionWrapper";
 
 const user = {
-  fullName: "XYZ",
-  position: "Developer",
-  email: "xyz@gmail.com",
-  collegeName: "ABC",
-  status: "Active",
-  skills: [],
-  totalProjects: 0,
-  rating: 0,
-  performanceStatus: ""
+wallet_id:"dmwk398r73fh",
+ 
+ 
+
+ ethereum:0,
+ bitcoin:0, 
+
 };
 
 const DashboardPage: React.FC = () => {
+  const context=useContext(StringContext)
+  if (!context) {
+    // Handle the case when context is undefined
+    throw new Error("useStringContext must be used within a StringProvider");
+  }
+const {count,setCount}=context;
+ 
   return (
     <>
       <Navbar />
@@ -27,55 +34,32 @@ const DashboardPage: React.FC = () => {
             className="w-16 h-16 rounded-full object-cover"
           />
           <div>
-            <h1 className="text-2xl font-bold">{user.fullName}</h1>
-            <p className="text-gray-600">{user.position}</p>
+            <h1 className="text-2xl font-bold">{count}</h1>
+            {/* <p className="text-gray-600">{user.position}</p> */}
           </div>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {/* Personal Information Panel */}
-          <div className="p-4 border rounded-lg shadow-sm">
-            <h2 className="text-lg font-semibold mb-2">Personal Information</h2>
-            <p>
-              <strong>Email:</strong> {user.email}
-            </p>
-            <p>
-              <strong>College:</strong> {user.collegeName}
-            </p>
-            <p>
-              <strong>Position:</strong> {user.position}
-            </p>
-            <p>
-              <strong>Status:</strong> {user.status}
-            </p>
-          </div>
+       
 
-          {/* Skills Panel */}
-          <div className="p-4 border rounded-lg shadow-sm">
-            <h2 className="text-lg font-semibold mb-2">Skills</h2>
-            <div className="flex flex-wrap gap-2">{user.skills}</div>
-          </div>
 
-          {/* Projects Panel */}
-          <div className="p-4 border rounded-lg shadow-sm">
-            <h2 className="text-lg font-semibold mb-2">Projects</h2>
-            <p>
-              <strong>Total Projects:</strong> {user.totalProjects}
-            </p>
-          </div>
+
+         
 
           {/* Ratings Panel */}
           <div className="p-4 border rounded-lg shadow-sm">
-            <h2 className="text-lg font-semibold mb-2">Ratings</h2>
+            <h2 className="text-lg font-semibold mb-2">Ethereum</h2>
             <p>
-              <strong>Overall Rating:</strong> {user.rating} / 5
+              {user.ethereum} ETH
             </p>
           </div>
 
           {/* Performance Status Panel */}
           <div className="p-4 border rounded-lg shadow-sm">
-            <h2 className="text-lg font-semibold mb-2">Performance Status</h2>
-            <p>{user.performanceStatus}</p>
+            <h2 className="text-lg font-semibold mb-2">Bitcoin</h2>
+            <p>
+              {user.bitcoin}  BTC</p>
           </div>
         </div>
       </div>

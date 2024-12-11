@@ -4,6 +4,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import img from './resources/logo.png'
 
+
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -56,8 +57,9 @@ const Navbar: React.FC = () => {
           <Link href="/services" className="hover:text-gray-400">
             Services
           </Link>
-          <Link href="/careers" className="hover:text-gray-400">
-            Careers
+       
+          <Link href="/about" className="hover:text-gray-400">
+          About
           </Link>
           <Link href="/contact" className="hover:text-gray-400">
             Contact
@@ -67,7 +69,7 @@ const Navbar: React.FC = () => {
         {/* Login Button (visible on all screens) */}
         <div className="hidden md:block">
           <Link href="/login" className="hover:text-gray-400">
-            Login
+           Wallet
           </Link>
         </div>
       </div>

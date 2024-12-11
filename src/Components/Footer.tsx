@@ -11,7 +11,7 @@ import QR from './resources/QR.png';
 
 const Footer: React.FC = () => {
   return (
-    <div className="footer text-white py-8 px-4 md:px-16 lg:px-32">
+    <div className="bg-black text-white py-8 px-4 md:px-16 lg:px-32">
       {/* Logo */}
       <div className="flex items-center justify-center w-[100%] space-x-2 mb-5">
         <Image src={img} alt="WebInOrbit Logo" width={350} height={120} />
@@ -89,12 +89,7 @@ const Footer: React.FC = () => {
 
         {/* Right Section - QR Code */}
         <div className="flex justify-center md:justify-end">
-          <Image
-            src={QR}
-            alt="QR Code"
-            width={150}
-            height={150}
-          />
+        
         </div>
       </div>
       {/* Copyright Section */}
