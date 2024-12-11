@@ -1,7 +1,7 @@
 "use client";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
-import { useContext } from "react";
+import { useContext,useEffect } from "react";
 import { StringContext } from "@/Components/provider/SessionWrapper";
 
 const user = {
@@ -21,11 +21,20 @@ const DashboardPage: React.FC = () => {
     throw new Error("useStringContext must be used within a StringProvider");
   }
 const {count,setCount}=context;
+
+useEffect(() => {
+ console.log(count)
+
+
+}, [])
+
+
+
  
   return (
     <>
       <Navbar />
-      <div className="bg-transparent backdrop-blur-lg p-6 max-w-4xl min-h-[70vh] mx-auto space-y-6">
+      <div className="bg-transparent backdrop-blur-lg p-6 max-w-4xl min-h-[70vh] mx-auto ">
         {/* Header */}
         <div className="flex items-center space-x-4">
           <img
@@ -62,7 +71,14 @@ const {count,setCount}=context;
               {user.bitcoin}  BTC</p>
           </div>
         </div>
+      <div className="flex w-[400px] gap-[100px] justify-center mt-[40px]   ">
+      <div className="text-gray-900 h-[40px] bg-gray-300 p-2 w-[60px] rounded-md text-center">Sell</div>
+           <div className="text-gray-900 h-[40px] bg-gray-300 p-2 w-[60px] rounded-md text-center">Buy</div>
+           <div className="text-gray-900 h-[40px] bg-gray-300 p-2 w-[120px] rounded-md text-center">Exchange</div>
+
       </div>
+      </div>
+
       <Footer />
     </>
   );

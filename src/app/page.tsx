@@ -7,6 +7,19 @@ const Home: React.FC = () => {
   return (
     <>
       <Navbar />
+      <div className='h-[80vh] flex flex-col justify-center items-center'>
+      <div className='font-bold text-center text-[80px]  p-2 m-4'>
+
+      METAVERXE
+
+      </div>
+
+      <div className='text-3xl'>
+      Metaverxe: Empowering Your Trades, Decentralized and Limitless.
+      </div>
+
+      </div>
+      
       <Footer />
     </>
   );

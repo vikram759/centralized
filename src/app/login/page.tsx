@@ -20,8 +20,8 @@ const {count,setCount}=context;
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (agree) {
+      setCount(address);
       console.log("dd:", address);
-    setCount(address)
    
       // Add your login logic here
     } else {

@@ -21,9 +21,9 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-center md:items-start">
           {/* Contact Information */}
           <div className="mt-4 text-center md:text-left">
-            <p>3547 Sector: 23 D Chandigarh, India</p>
+            <p>Chandigarh, India</p>
             <p>Email: teamorbit@webinorbit.com</p>
-            <p>Phone: +91 8054776034</p>
+            <p>Phone: +91 XXXX-XXX-XXX</p>
           </div>
 
           {/* Social Media Icons */}
@@ -64,11 +64,7 @@ const Footer: React.FC = () => {
                 Home
               </Link>
             </li>
-            <li>
-              <Link href="/careers" className="hover:text-gray-400">
-                Careers
-              </Link>
-            </li>
+          
             <li>
               <Link href="/contact" className="hover:text-gray-400">
                 Contact
