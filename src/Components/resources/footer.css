@@ -1,0 +1,13 @@
+.footer{
+    background: url(./footerBG.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat-x;
+}
+
+.social a{
+    background: linear-gradient(135deg, black,gray);
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 6px;
+}

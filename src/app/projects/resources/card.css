@@ -1,0 +1,13 @@
+.perspective {
+    perspective: 1000px;
+  }
+  
+  .backface-hidden {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .group-hover\:rotate-y-180:hover .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  
