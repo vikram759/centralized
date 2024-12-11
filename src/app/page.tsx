@@ -10,12 +10,12 @@ const Home: React.FC = () => {
       <div className='h-[80vh] flex flex-col justify-center items-center'>
       <div className='font-bold text-center text-[80px]  p-2 m-4'>
 
-      METAVERXE
+      PECEX
 
       </div>
 
       <div className='text-3xl'>
-      Metaverxe: Empowering Your Trades, Decentralized and Limitless.
+      Pecex: Your Central Hub for Secure and Seamless Crypto Trading.
       </div>
 
       </div>

@@ -3,12 +3,12 @@ import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
 import { useState } from "react";
 import Link from "next/link";
-import "./resources/login.css";
+import "./resources/logins.css";
 import { useContext } from "react";
 import { StringContext } from "../../Components/provider/SessionWrapper";
 
 const LoginPage: React.FC = () => {
-  const [address, setaddress] = useState("");
+  const [password, setpassword] = useState("");
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [aadhar, setaadhar] = useState("");
@@ -23,8 +23,8 @@ const {count,setCount}=context;
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (agree) {
-      setCount(address);
-      console.log("dd:", address);
+   
+      console.log("dd:", );
    
       // Add your login logic here
     } else {
@@ -38,18 +38,11 @@ const {count,setCount}=context;
         <div className="login flex w-full md:p-32 justify-center">
           <div className="bg-[rgba(255,255,255,0.4)] p-8 rounded-lg shadow-lg w-full max-w-md text-center">
             <h2 className="text-2xl font-bold text-white mb-6">
-          Connect to Wallet
+        Login
             </h2>
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setname(e.target.value)}
-                placeholder="Full Name"
-                required
-                className="p-3 rounded-md bg-gray-200 text-gray-800"
-              />
+             
               <input
                 type="text"
                 value={email}
@@ -59,21 +52,14 @@ const {count,setCount}=context;
                 className="p-3 rounded-md bg-gray-200 text-gray-800"
               />
               <input
-                type="text"
-                value={aadhar}
-                onChange={(e) => setaadhar(e.target.value)}
-                placeholder="Aadhar Number"
+                type="password"
+                value={password}
+                onChange={(e) => setpassword(e.target.value)}
+                placeholder="Password"
                 required
                 className="p-3 rounded-md bg-gray-200 text-gray-800"
               />
-              <input
-                type="text"
-                value={address}
-                onChange={(e) => setaddress(e.target.value)}
-                placeholder="Enter your Wallet Address"
-                required
-                className="p-3 rounded-md bg-gray-200 text-gray-800"
-              />
+             
            
               <div className="flex items-center justify-center gap-2">
                 <input
@@ -100,8 +86,15 @@ const {count,setCount}=context;
                 type="submit"
                 className="p-3 rounded-md bg-gray-300 text-gray-900 font-semibold hover:bg-gray-400 transition"
               >
-              Connect Wallet
+            Login
               </button>
+
+
+              <div className="flex justify-around text-sm">
+               <div>Forgot Password</div>
+               <div>New? <Link href="/signup" className="text-black hover:text-white">Sign up</Link></div>
+
+              </div>
             </form>
           </div>
         </div>

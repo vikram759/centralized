@@ -64,13 +64,14 @@ const Navbar: React.FC = () => {
           <Link href="/contact" className="hover:text-gray-400">
             Contact
           </Link>
+          <Link href="/logins" className="hover:text-gray-400">
+           Login
+          </Link>
         </div>
 
         {/* Login Button (visible on all screens) */}
         <div className="hidden md:block">
-          <Link href="/login" className="hover:text-gray-400">
-           Wallet
-          </Link>
+          
         </div>
       </div>
 
@@ -83,13 +84,11 @@ const Navbar: React.FC = () => {
           <Link href="/services" className="block hover:text-gray-400">
             Services
           </Link>
-          <Link href="/careers" className="block hover:text-gray-400">
-            Careers
-          </Link>
+        
           <Link href="/contact" className="block hover:text-gray-400">
             Contact
           </Link>
-          <Link href="/login" className="block hover:text-gray-400">
+          <Link href="/logins" className="block hover:text-gray-400">
             Login
           </Link>
         </div>

@@ -64,7 +64,7 @@ const SignupPage: React.FC = () => {
                 type="text"
                 value={ID}
                 onChange={(e) => setID(e.target.value)}
-                placeholder="Enter your Govt Identity number"
+                placeholder="Enter your Aadhar"
                 required
                 className="p-3 rounded-md bg-gray-200 text-gray-800"
               />
@@ -103,6 +103,12 @@ const SignupPage: React.FC = () => {
               >
                 Launch to MetaverXe
               </button>
+
+              <div className="flex justify-around text-sm">
+               <div>Forgot Password</div>
+               <div>Already? <Link href="/logins" className="text-black hover:text-white">Sign up</Link></div>
+
+              </div>
             </form>
           </div>
         </div>
