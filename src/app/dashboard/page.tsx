@@ -34,7 +34,7 @@ const {count,setCount}=context;
             className="w-16 h-16 rounded-full object-cover"
           />
           <div>
-            <h1 className="text-2xl font-bold">{count}</h1>
+            <h1 className="text-2xl font-bold">{count}kejedjhudwfhfi</h1>
             {/* <p className="text-gray-600">{user.position}</p> */}
           </div>
         </div>
